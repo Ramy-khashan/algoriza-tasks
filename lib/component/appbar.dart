@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'button.dart';
 
 PreferredSizeWidget appBar(BuildContext context, Size size,
         {bool isSkip = false,
@@ -29,18 +28,5 @@ PreferredSizeWidget appBar(BuildContext context, Size size,
               ),
             )
           : const SizedBox.shrink(),
-      actions: [
-        isSkip
-            ? ButtonItem(
-                head: "Skip",
-                onTap: onTap,
-                size: size,
-                color: Colors.orange.shade100.withOpacity(.5),
-                textColor: Colors.black,
-                radius: 30,
-                height: size.longestSide * .01,
-                textSize: size.shortestSide * .04,
-              )
-            : const SizedBox.shrink(),
-      ],
+      
     );

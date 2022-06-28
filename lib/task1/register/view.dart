@@ -50,6 +50,7 @@ class RegisterScreen extends StatelessWidget {
                     Text(
                       "Register",
                       style: TextStyle(
+                          fontFamily: "shape",
                           fontSize: size.shortestSide * .06,
                           fontWeight: FontWeight.w700),
                     ),

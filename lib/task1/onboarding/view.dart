@@ -21,16 +21,22 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: appBar(
-          context,
-          size,
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => RegisterScreen()));
-          },
-          isSkip: true,
-          isBack: false,
-        ),
+          appBar:
+            AppBar(backgroundColor: Colors.transparent, elevation: 0, actions: [
+          ButtonItem(
+            head: "Skip",
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RegisterScreen()));
+            },
+            size: size,
+            color: Colors.orange.shade100.withOpacity(.5),
+            textColor: Colors.black,
+            radius: 30,
+            width: size.shortestSide * .2,
+            textSize: size.shortestSide * .04,
+          ),
+        ]),
         body: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: size.shortestSide * .05,
